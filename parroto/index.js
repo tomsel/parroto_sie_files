@@ -10,7 +10,7 @@ function iterate(value, key) {
   console.log(moment(key).format(DATE_FORMAT) + ' ' + value);
 }
 
-sie.readFile('test.SI', function(err, data){
+sie.readFile('./testfiles/tobias_4b_16-17.SE', function(err, data){
 	assert.ifError(err);
 
   var  bookkeeping_account_from_user_input = [];
