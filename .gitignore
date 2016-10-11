@@ -44,5 +44,4 @@ jspm_packages
 *.tgz
 
 #SE and SI files
-*.SI
-*:SE
+*.SE
