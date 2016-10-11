@@ -1,0 +1,25 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "A parroto project",
+  "main": "index.js",
+  "dependencies": {
+    "es6-shim": "^0.35.1",
+    "moment": "^2.15.1",
+    "sie-reader": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomsel/parroto_sie_files.git"
+  },
+  "author": "Tomas Selldén",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomsel/parroto_sie_files/issues"
+  },
+  "homepage": "https://github.com/tomsel/parroto_sie_files#readme"
+}
