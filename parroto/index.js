@@ -9,12 +9,12 @@ const DATE_FORMAT = 'YYYYMMDD';
 function iterate(value, key) {
   console.log(moment(key).format(DATE_FORMAT) + ' ' + value);
 }
-
-sie.readFile('./testfiles/tobias_4b_16-17.SE', function(err, data){
+var test_file = process.argv[2];
+sie.readFile('./testfiles/' + test_file, function(err, data){
 	assert.ifError(err);
 
   var  bookkeeping_account_from_user_input = [];
-  for (var i = 2; i < process.argv.length; i++) {
+  for (var i = 3; i < process.argv.length; i++) {
     bookkeeping_account_from_user_input.push(process.argv[i]);
   }
 
@@ -79,11 +79,13 @@ sie.readFile('./testfiles/tobias_4b_16-17.SE', function(err, data){
       map_of_date_and_account.set(i.format(DATE_FORMAT), balance_tmp);
     }
   }
-  process.stdout.write('Cash summary of following bookkeeping accounts ')
+  process.stdout.write('Cash summary of file ' + test_file + ' of following bookkeeping accounts ')
+
   for (var i = 0; i < bookkeeping_account_from_user_input.length; i = i+2) {
       process.stdout.write(bookkeeping_account_from_user_input[i] + ' - ' + bookkeeping_account_from_user_input[i+1] + ' and ' );
   }
-  console.log(' ');
+  console.log();
+  console.log();
   for (var i = moment(startDate); i.isBefore(endDate); i.add(1, 'days')) {
     console.log(i.format(DATE_FORMAT) + ' ' + map_of_date_and_account.get(i.format(DATE_FORMAT)));
   }
